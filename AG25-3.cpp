@@ -2,27 +2,27 @@
 #include <cmath>
 using namespace std;
 bool check(int a) {
-	double f = a;
-	if (sqrt(f) == sqrt(a))return true;
+	double b = a;
+	if (sqrt(b) == sqrt(a))return true;
 	else return false;
 }
-void rec(int x, int y, int& k) {
-	if (x == y) {
-		k++;
+void rec(int a, int b, int& c) {
+	if (a == b) {
+		c++;
 	}
 	else {
-		if (y >= x + 9)rec(x, y - 9, k);
-		if (check(y) == true)rec(x, sqrt(y), k);
-		if (y % 7 == 0 && y / 7 >= x)rec(x, y / 7, k);
-		if (y % 10 == 1 && (y - 1) / 10 >= x)rec(x, (y - 1) / 10, k);
+		if (b >= a + 9)rec(a, b - 9, c);
+		if (check(b) == true)rec(a, sqrt(b), c);
+		if (b % 7 == 0 && b / 7 >= a)rec(a, b / 7, c);
+		if (b % 10 == 1 && (b - 1) / 10 >= a)rec(a, (b - 1) / 10, c);
 	}
 }
 int main()
 {
-	int x, y, k = 0;
-	cin >> x >> y;
-	rec(x, y, k);
-	if (k > 0)cout << "YES";
+	int a, b, c = 0;
+	cin >> a >> b;
+	rec(a, b, c);
+	if (c > 0)cout << "YES";
 	else cout << "NO";
 	return 0;
 }
