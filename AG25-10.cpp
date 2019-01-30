@@ -2,13 +2,13 @@
 using namespace std;
 
 int main() {
-	int n, k, ans = 1;
+	int n, n1, n2 = 1;
 	cin >> n;
 	for (int i = 0; i < n; i++) {
-		cin >> k;
-		if (k % 2 == 1 and k % 3 == 0) {
-			ans *= k;
+		cin >> n1;
+		if (n1 % 2 == 1 and n1 % 3 == 0) {
+		n2 *= n1;
 		}
 	}
-	cout << ans;
+	cout << n2;
 }
