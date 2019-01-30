@@ -8,11 +8,11 @@ int main() {
 	for (int i = 0; i < n; i++) {
 		cin >> A[i];
 	}
-	int ans = 0;
+	int x = 0;
 	for (int i = 1; i < n; i++) {
 		if ((A[i] / 2) < A[i - 1] and A[i] > A[i - 1]) {
-			ans++;
+			x++;
 		}
 	}
-	cout << ans;
+	cout << x;
 }
