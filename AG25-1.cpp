@@ -1,20 +1,20 @@
 #include <iostream>
 using namespace std;
-void rec(int x, int y, int &k)
+void rec(int a, int b, int &k)
 {
-	if (x == y) k++;
+	if (x == b) k++;
 	else
 	{
-		if (x <= y) rec(x + 1, y, k);
-		if (x <= y) rec(x * 2, y, k);
-		if (x <= y) rec(x * 3, y, k);
+		if (a <= b) rec(a + 1, b, k);
+		if (a <= b) rec(a * 2, b, k);
+		if (a <= b) rec(a * 3, b, k);
 	}
 }
 int main()
 {
-	int x, y, k = 0;
-	cin >> x >> y;
-	rec(x, y, k);
+	int a, b, k = 0;
+	cin >> a >> b;
+	rec(a, b, k);
 	cout << k;
 	return 0;
 }
