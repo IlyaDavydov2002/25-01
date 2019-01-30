@@ -24,6 +24,7 @@ void rec(int x, int y) {
 		}
 	}
 }
+
 int main()
 {
 	int x, y;
